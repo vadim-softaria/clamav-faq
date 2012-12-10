@@ -191,9 +191,10 @@ Reconfigure your packet filter to allow incoming connections on port 22/tcp and 
 
 You can furtherly restrict access to these ports by only allowing connections from/to the following IP addresses:
 
-   * 194.109.142.194
+   * 194.109.142.194 (this IP is being deprecated near the end of 2012)
    * 64.18.103.6
    * 78.46.32.131
+   * 128.177.8.249
 
 Any changes to this IP address list will be announced on the clamav-mirrors mailing-list.
 
@@ -204,6 +205,7 @@ Here is an example for a Linux box running ssh on port 2222 and without any fire
    * iptables -t nat -I PREROUTING -s 194.109.142.194 -m tcp -p tcp --dport 22 -j REDIRECT --to-port 2222
    * iptables -t nat -I PREROUTING -s 64.18.103.6 -m tcp -p tcp --dport 22 -j REDIRECT --to-port 2222
    * iptables -t nat -I PREROUTING -s 78.46.32.131 -m tcp -p tcp --dport 22 -j REDIRECT --to-port 2222
+   * iptables -t nat -I PREROUTING -s 128.177.8.249 -m tcp -p tcp --dport 22 -j REDIRECT --to-port 2222
 </pre>
 YMMV.
 
