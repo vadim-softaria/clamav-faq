@@ -41,12 +41,19 @@ $HTTP["url"] =~ "\.cdiff$" {
 
 ### Nginx ###
 
-<pre>if ( $request_uri ~ "\.cvd$" ) {
-       set $limit_rate 40k;
+<pre>
+location / {
+  root /home/clamavdb/public_html;
+
+  location ~ \.cvd$ {
+      limit_rate 40k;
+  }
+
+  location ~ \.cdiff$ {
+      limit_rate 400k;
+  }
 }
-if ( $request_uri ~ "\.cdiff$" ) {
-       set $limit_rate 400k;
-}
+
 </pre>
 
 _Note_ You can also use mod_cband to limit the download-speed.
