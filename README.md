@@ -22,6 +22,8 @@ This is the official ClamAV FAQ repository. To checkout all the files:
 
 [FAQ - Win32](https://github.com/vrtadmin/clamav-faq/blob/master/faq/faq-win32.md)
 
+[FAQ - EOL](https://github.com/vrtadmin/clamav-faq/blob/master/faq/faq-eol.md)
+
 ### Mirror How-To ###
 
 [Mirror How-To](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorHowto.md)
