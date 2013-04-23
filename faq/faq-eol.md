@@ -8,7 +8,7 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 
 The naming convention for ClamAV releases uses three numbers (X.Y.Z) where the first two (X.Y) identify a major release and the last one (Z) a minor release.
 
-As of March 2013, the latest major release is 0.97 and the latest minor release is 0.97.7.
+As of April 23 2013, the latest major release is 0.97 and the latest minor release is 0.97.8.
 
 Before releasing a CVD update, we verify that it can be correctly loaded by the latest two major releases of ClamAV and all the minor versions released after each of them.
 
