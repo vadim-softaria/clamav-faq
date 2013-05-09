@@ -158,7 +158,7 @@ The clam-clientsync requires the "lockfile" program, which is part of the procma
 
 ### Submit the mirror details
 
-Send an email with the server's details to vrt -at- sourcefire.com following this template:
+Send an email with the server's details to mirror-admin -at- clamav.net following this template:
 <pre>
    * clamav.foo.com
    * ip address: 1.2.3.4
