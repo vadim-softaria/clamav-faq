@@ -33,3 +33,5 @@ This is the official ClamAV FAQ repository. To checkout all the files:
 [Mirror Coordination](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorsCoordination.md)
 
 [Using a Private Mirror](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/CvdPrivateMirror.md)
+
+[Resolving Mirror Problems](ihttps://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorProblems.md)
