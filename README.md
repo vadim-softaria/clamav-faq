@@ -34,4 +34,4 @@ This is the official ClamAV FAQ repository. To checkout all the files:
 
 [Using a Private Mirror](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/CvdPrivateMirror.md)
 
-[Resolving Mirror Problems](ihttps://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorProblems.md)
+[Resolving Mirror Problems](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorProblems.md)
