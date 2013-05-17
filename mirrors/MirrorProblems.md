@@ -36,7 +36,7 @@
 	* MD5: 89dedb45609e59b0244fb5202ab6fa56
 	* SHA1: 9947ec90e60499ab7c3331670d5b26b4eaac76e4
 	* Check your freshclam log file for repeated errors that look like:
-	* Ignoring mirror [Mirror's IP address here] (has connected too many times with an outdated version)
+	* Ignoring mirror xxx.xxx.xxx.xxx (has connected too many times with an outdated version)
 	* Check the version number and the functional level of the daily.cvd by using sigtool:
 	* sigtool --info daily.cvd will show a version number of 16681 and a functionality level of 73
 
