@@ -195,6 +195,7 @@ You can furtherly restrict access to these ports by only allowing connections fr
    * 64.18.103.6
    * 78.46.32.131
    * 128.177.8.249
+   * 192.148.79.65
 
 Any changes to this IP address list will be announced on the clamav-mirrors mailing-list.
 
