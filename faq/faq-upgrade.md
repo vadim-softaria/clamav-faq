@@ -21,10 +21,10 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 * I upgraded to the latest stable version but I still get the message _Your ClamAV installation is OUTDATED_, why?
 
 >Make sure there is really only one version of ClamAV installed on your system: 
-   `$ whereis freshclam` 
-   `$ whereis clamscan`
+   `$ whereis freshclam 
+   $ whereis clamscan`
 
->Also make sure that you haven't got old libraries (`libclamav.so*`) lying around your filesystem. You can verify it using: `$ ldd `which freshclam``
+>Also make sure that you haven't got old libraries (`libclamav.so*`) lying around your filesystem. You can verify it using: `$ ldd \`which freshclam\``
 
 * What does _Malformed hexstring: This ClamAV version has reached End of Life_ mean?
 
@@ -38,8 +38,8 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 
 Please note that the resulting output should look like the following:
 
-`gpg: Signature made <some date> using DSA key ID 15497F03`
-`gpg: Good signature from Sourcefire VRT <email address>`
+`gpg: Signature made <some date> using DSA key ID 15497F03
+gpg: Good signature from Sourcefire VRT <email address>`
 
 >For other PGP implementation, please refer to their manual.
 
