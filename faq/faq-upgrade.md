@@ -24,7 +24,7 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
    `$ whereis freshclam 
    $ whereis clamscan`
 
->Also make sure that you haven't got old libraries (`libclamav.so*`) lying around your filesystem. You can verify it using: `$ ldd \`which freshclam\``
+>Also make sure that you haven't got old libraries (`libclamav.so*`) lying around your filesystem. You can verify it using: `$ ldd which freshclam`
 
 * What does _Malformed hexstring: This ClamAV version has reached End of Life_ mean?
 
