@@ -16,7 +16,7 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 
 * What does _Your ClamAV installation is OUTDATED_ mean?
 
->You'll get this message whenever a new version of ClamAV is released.  In order to detect all the latest viruses, it's not enough to keep your  database up to date. You also need to run the latest version of the  scanner. You can download the "sources":/download/sources of the latest release from our website. Upgrade instructions are on the "Wiki":http://wiki.clamav.net/Main/UpgradeInstructions. If you are afraid to break something while upgrading, use  the "precompiled packages":/download/packages/ for your operating system/distribution.  Remember: running the latest stable release also improves stability.
+>You'll get this message whenever a new version of ClamAV is released.  In order to detect all the latest viruses, it's not enough to keep your database up to date. You also need to run the latest version of the scanner. You can download the [sources] of the latest release from our website. Upgrade instructions are on the [Wiki]. If you are afraid to break something while upgrading, use  the [precompiled packages] for your operating system/distribution.  Remember: running the latest stable release also improves stability.
 
 * I upgraded to the latest stable version but I still get the message _Your ClamAV installation is OUTDATED_, why?
 
@@ -33,7 +33,7 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 * How do I verify the integrity of ClamAV sources?
 
 
->Using [GnuPG] you can easily verify the authenticity of your stable release downloads by using the following method: Download the [Sourcefire VRT key](http://labs.snort.org/contact.html) from the VRT labs site. Import the key into your local public keyring: <code>$ gpg --import vrt.gpg</code>. Download the stable release AND the corresponding .sig file to the same directory. Verify that the stable release download is signed with the Sourcefire VRT key: <br><code>$ gpg --verify clamav-X.XX.tar.gz.sig</code><br>Please note that the resulting output should look like the following:<br> <pre> <code>
+>Using [GnuPG] you can easily verify the authenticity of your stable release downloads by using the following method: Download the [Sourcefire VRT key] from the VRT labs site. Import the key into your local public keyring: `$ gpg --import vrt.gpg`. Download the stable release AND the corresponding .sig file to the same directory. Verify that the stable release download is signed with the Sourcefire VRT key: <br><code>$ gpg --verify clamav-X.XX.tar.gz.sig</code><br>Please note that the resulting output should look like the following:<br> <pre> <code>
 gpg: Signature made <some date> using DSA key ID 15497F03
 gpg: Good signature from Sourcefire VRT <email address>
 </code></pre>
@@ -52,9 +52,11 @@ gpg: Good signature from Sourcefire VRT <email address>
 [Upgrade Instructions](https://github.com/vrtadmin/clamav-faq/blob/master/faq/Upgrading.md)
 [eol-clamav-094]: http://www.clamav.net/eol-clamav-094
 [GnuPG]:http://www.gnupg.org/
-[Sourcefire VRT key](http://pgp.mit.edu:11371/pks/lookup?search=Sourcefire+VRT&op=index)
-[source download page](http://sourceforge.net/projects/clamav/files/)
+[sources]: http://sourceforge.net/projects/clamav/files/
+[Wiki]: https://github.com/vrtadmin/clamav-faq/blob/master/faq/Upgrading.md
+[precompiled packages]: http://www.clamav.net/lang/en/download/packages/
+[Sourcefire VRT key]: http://labs.snort.org/contact.html
 [gcc's bugzilla]: http://gcc.gnu.org/bugzilla/show_bug.cgi?id=26763
 [relevant article]: http://kerneltrap.org/Linux/Compiler_Optimization_Bugs_and_World_Domination
-[our bugzilla]: https://wwws.clamav.net/bugzilla/show_bug.cgi?id=613
+[our bugzilla]: https://bugzilla.clamav.net/show_bug.cgi?id=613 
 [official binaries available]: http://llvm.org/releases/download.html#2.2
