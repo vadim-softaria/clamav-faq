@@ -21,10 +21,10 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 * I upgraded to the latest stable version but I still get the message _Your ClamAV installation is OUTDATED_, why?
 
 >Make sure there is really only one version of ClamAV installed on your system: 
-   <pre><code>   $ whereis freshclam 
-   $ whereis clamscan</code></pre>
+   `$ whereis freshclam` 
+   `$ whereis clamscan`
 
->Also make sure that you haven't got old libraries (libclamav.so&#42;) lying around your filesystem. You can verify it using: <code>$ ldd `which freshclam`</code>
+>Also make sure that you haven't got old libraries (`libclamav.so&#42;`) lying around your filesystem. You can verify it using: `$ ldd `which freshclam``
 
 * What does _Malformed hexstring: This ClamAV version has reached End of Life_ mean?
 
@@ -32,15 +32,18 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 
 * How do I verify the integrity of ClamAV sources?
 
+>Using [GnuPG] you can easily verify the authenticity of your stable release downloads by using the following method: Download the [Sourcefire VRT key] from the VRT labs site. Import the key into your local public keyring: `$ gpg --import vrt.gpg`. Download the stable release AND the corresponding `.sig` file to the same directory. Verify that the stable release download is signed with the [Sourcefire VRT key]: 
 
->Using [GnuPG] you can easily verify the authenticity of your stable release downloads by using the following method: Download the [Sourcefire VRT key] from the VRT labs site. Import the key into your local public keyring: `$ gpg --import vrt.gpg`. Download the stable release AND the corresponding .sig file to the same directory. Verify that the stable release download is signed with the Sourcefire VRT key: <br><code>$ gpg --verify clamav-X.XX.tar.gz.sig</code><br>Please note that the resulting output should look like the following:<br> <pre> <code>
-gpg: Signature made <some date> using DSA key ID 15497F03
-gpg: Good signature from Sourcefire VRT <email address>
-</code></pre>
+`$ gpg --verify clamav-X.XX.tar.gz.sig`
+
+Please note that the resulting output should look like the following:
+
+`gpg: Signature made <some date> using DSA key ID 15497F03`
+`gpg: Good signature from Sourcefire VRT <email address>`
 
 >For other PGP implementation, please refer to their manual.
 
-* Where can I get the latest SVN snapshot of ClamAV?
+* Where can I get the latest GIT snapshot of ClamAV?
 
 >Visit the [source download page].
 
@@ -56,6 +59,7 @@ gpg: Good signature from Sourcefire VRT <email address>
 [Wiki]: https://github.com/vrtadmin/clamav-faq/blob/master/faq/Upgrading.md
 [precompiled packages]: http://www.clamav.net/lang/en/download/packages/
 [Sourcefire VRT key]: http://labs.snort.org/contact.html
+[source download page]: http://www.clamav.net/lang/en/download/sources/
 [gcc's bugzilla]: http://gcc.gnu.org/bugzilla/show_bug.cgi?id=26763
 [relevant article]: http://kerneltrap.org/Linux/Compiler_Optimization_Bugs_and_World_Domination
 [our bugzilla]: https://bugzilla.clamav.net/show_bug.cgi?id=613 
