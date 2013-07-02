@@ -14,8 +14,8 @@ If there are no new packages, you have three options:
 
 Uninstall the old version
 
-* ./configure
-* sudo make uninstall
+* `./configure`
+* `sudo make uninstall`
 
 Compile and install the new one: see [Installing ClamAV]
 
@@ -27,9 +27,8 @@ __Note:__ Backup your database signature (located in _/usr/local/share/clamav_ b
 
 If you obtained a server from a competent hosting provider they probably already installed clamav using yum and the extras repository. To obtain a new version:
 
->yum list clamav
-
->yum update clamav (if everything updated properly, run freshclam)
+`yum list clamav
+yum update clamav` (if everything updated properly, run freshclam)
 
 [Installing ClamAV]: https://github.com/vrtadmin/clamav-faq/blob/master/faq/Installing.md
 
