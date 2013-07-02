@@ -33,7 +33,7 @@ This is the official FAQ. For additional FAQs please visit our [GitHub repositor
 * How do I verify the integrity of ClamAV sources?
 
 
->Using [GnuPG] you can easily verify the authenticity of your stable release downloads by using the following method: Download the [Sourcefire VRT key] from the clamav.net site. Import the key into your local public keyring: <code>$ gpg --import vrt.gpg</code>. Download the stable release AND the corresponding .sig file to the same directory. Verify that the stable release download is signed with the Sourcefire VRT key: <br><code>$ gpg --verify clamav-X.XX.tar.gz.sig</code><br>Please note that the resulting output should look like the following:<br> <pre> <code>
+>Using [GnuPG] you can easily verify the authenticity of your stable release downloads by using the following method: Download the [Sourcefire VRT key](http://labs.snort.org/contact.html) from the VRT labs site. Import the key into your local public keyring: <code>$ gpg --import vrt.gpg</code>. Download the stable release AND the corresponding .sig file to the same directory. Verify that the stable release download is signed with the Sourcefire VRT key: <br><code>$ gpg --verify clamav-X.XX.tar.gz.sig</code><br>Please note that the resulting output should look like the following:<br> <pre> <code>
 gpg: Signature made <some date> using DSA key ID 15497F03
 gpg: Good signature from Sourcefire VRT <email address>
 </code></pre>
