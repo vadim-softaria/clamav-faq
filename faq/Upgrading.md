@@ -1,9 +1,5 @@
 # Upgrading ClamAV #
 
-* [If you installed from packages][]
-* [If you installed from sources][]
-* [Webmin and yum][]
-
 ## If you installed from packages ##
 
 Find new packages and install them. See ClamPackages
@@ -11,8 +7,8 @@ Find new packages and install them. See ClamPackages
 If there are no new packages, you have three options:
 
 * Wait
-* BuildClamPackage
-* InstallFromSource
+* Build Clam Package
+* Install From Source
 
 ## If you installed from sources ##
 
@@ -35,6 +31,6 @@ If you obtained a server from a competent hosting provider they probably already
 
 >yum update clamav (if everything updated properly, run freshclam)
 
-[Upgrade Instructions](https://github.com/vrtadmin/clamav-faq/blob/master/faq/Upgrading.md)
+[Installing ClamAV]: https://github.com/vrtadmin/clamav-faq/blob/master/faq/Installing.md
 
-[Installing ClamAV](https://github.com/vrtadmin/clamav-faq/blob/master/faq/Installing.md)
+[Upgrade Instructions]: https://github.com/vrtadmin/clamav-faq/blob/master/faq/Upgrading.md
