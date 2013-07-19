@@ -2,7 +2,7 @@
 
 This is the official ClamAV FAQ repository. To checkout all the files:
 
- git clone https://github.com/vrtadmin/clamav-faq.git
+ `git clone https://github.com/vrtadmin/clamav-faq.git`
 
 ### FAQ Pages ###
 
