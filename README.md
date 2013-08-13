@@ -26,6 +26,8 @@ This is the official ClamAV FAQ repository. To checkout all the files:
 
 [FAQ - Contributors](https://github.com/vrtadmin/clamav-faq/blob/master/faq/faq-contributors.md)
 
+[FAQ - PUA - Potentially Unwanted Application](https://github.com/vrtadmin/clamav-faq/blob/master/faq/faq-pua.md)
+
 ### Mirror How-To ###
 
 [Mirror How-To](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorHowto.md)
