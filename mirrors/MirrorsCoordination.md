@@ -25,41 +25,8 @@ Here is an example config that will do the following:
 </IfModule>
 </pre>
 
-
-### Lighttpd ###
-
-<pre>$HTTP["url"] =~ "\.cvd$" {
-  server.max-connections = 50
-  connection.kbytes-per-second = 40
-}
-$HTTP["url"] =~ "\.cdiff$" {
-  server.max-connections = 50
-  connection.kbytes-per-second = 400
-}
-</pre>
-
-
-### Nginx ###
-
-<pre>
-location / {
-  root /home/clamavdb/public_html;
-
-  location ~ \.cvd$ {
-      limit_rate 40k;
-  }
-
-  location ~ \.cdiff$ {
-      limit_rate 400k;
-  }
-}
-
-</pre>
-
 _Note_ You can also use mod_cband to limit the download-speed.
-
 The Source is available at http://cband.linux.pl/download/ or http://sourceforge.net/projects/cband/
-
 Just run
 <pre>./configure
 make
@@ -70,7 +37,6 @@ Add the module to your apache-config by manually adding it to _/etc/apache2/http
 
 <pre>LoadModule cband_module  /usr/lib/apache2/modules/mod_cband.so
 </pre>
-
 Edit the config for the vhost and add
 
 <pre><IfModule mod_cband.c>
@@ -111,6 +77,79 @@ With mod_cband you can also limit the download speed based on monthly traffic or
 
 _Thanks to Florian Schaal_
 
+
+### Lighttpd ###
+
+<pre>$HTTP["url"] =~ "\.cvd$" {
+  server.max-connections = 50
+  connection.kbytes-per-second = 40
+}
+$HTTP["url"] =~ "\.cdiff$" {
+  server.max-connections = 50
+  connection.kbytes-per-second = 400
+}
+</pre>
+
+
+### Nginx ###
+
+<pre>
+location / {
+  root /home/clamavdb/public_html;
+
+  location ~ \.cvd$ {
+      limit_rate 40k;
+  }
+
+  location ~ \.cdiff$ {
+      limit_rate 400k;
+  }
+}
+
+</pre>
+
+#### A customer example for Nginx ####
+
+<pre>
+limit_conn_zone $server_port zone=cvds:1m;
+limit_conn_zone $server_port zone=cdiffs:1m;
+limit_conn_log_level info;
+
+server {
+       server_name database.clamav.net ~^db\..*\.clamav\.net clamav.<hostname>.org;
+       listen 80;
+
+       access_log /var/log/nginx/clamav.log;
+
+       location / {
+               root /srv/www/clamav;
+               index index.html;
+
+               location ~ \.cvd$ {
+                       limit_conn cvds 25;
+                       limit_rate 40k;
+               }
+
+               location ~ \.cdiff$ {
+                       limit_conn cdiffs 5;
+                       limit_rate 400k;
+               }
+
+               if ( $http_user_agent ~* "^clam(av|win)\/(0\.[67]|devel-200[0-8]|devel-0\.[0-8]).*$" ) {
+                       return 404;
+               }
+       }
+}
+</pre>
+
+> With this, I have two zones, which I can configure independently and
+> where I limit CVD downloads to 25 connections with each up to 40k.
+> The cdiffs are limited to 5 connections at a time to up to 400k each.
+> This results in about 2MB/s or 5TB a month. If we stay way under my 10TB
+> limit, I will allow some more connections.
+>
+>The trick is to use a static value like $server_port as a counter
+>instead of $remote_address.
 
 # Reducing traffic #
 
