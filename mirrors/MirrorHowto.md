@@ -215,7 +215,7 @@ Make sure to save these rules so that they are executed everytime you reboot the
 
 ### Protect your mirror from abusers
 
-You should check out the [[MirrorsCoordination]] page for information about protecting your mirror from abusers. If your mirror has strict bandwidth/resources you will find some useful hints on that page.
+You should check out the [MirrorsCoordination](https://github.com/vrtadmin/clamav-faq/blob/master/mirrors/MirrorsCoordination.md) page for information about protecting your mirror from abusers. If your mirror has strict bandwidth/resources you will find some useful hints on that page.
 
 ### Add your logo
 
@@ -223,7 +223,7 @@ You are welcome to put your company logo on the mirror home page. Just copy it t
 
 ### Subscribe to the mirrors mailing lists
 
-Subscribe to clamav-mirrors at lists.clamav.net: http://lists.clamav.net/mailman/listinfo/clamav-mirrors
+Subscribe to clamav-mirrors at lists.clamav.net: [http://lists.clamav.net/mailman/listinfo/clamav-mirrors](http://lists.clamav.net/mailman/listinfo/clamav-mirrors)
 
 Subscribe requests have to be approved. We will approve your subscription request only after reviewing your server's info.
 
