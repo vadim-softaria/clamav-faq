@@ -125,6 +125,11 @@ server {
                root /srv/www/clamav;
                index index.html;
 
+               #deny abusers
+               deny 80.66.20.180;
+               deny 80.66.20.181;
+               deny 194.0.92.9;
+
                location ~ \.cvd$ {
                        limit_conn cvds 25;
                        limit_rate 40k;
@@ -135,7 +140,13 @@ server {
                        limit_rate 400k;
                }
 
+               # deny requests from versions &lt;= 0.88 or devel
                if ( $http_user_agent ~* "^clam(av|win)\/(0\.[67]|devel-200[0-8]|devel-0\.[0-8]).*$" ) {
+                       return 404;
+               }
+
+               # deny requests from versions &lt;= 0.94 (not supported anymore)
+               if ( $http_user_agent ~* "^clam(av|win)\/(0.9[01234]).*$" ) {
                        return 404;
                }
        }
