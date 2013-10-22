@@ -125,6 +125,7 @@ server {
                root /srv/www/clamav;
                index index.html;
 
+               #deny abusers
                deny 80.66.20.180;
                deny 80.66.20.181;
                deny 194.0.92.9;
