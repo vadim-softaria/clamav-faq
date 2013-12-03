@@ -37,7 +37,7 @@ Here is a step-by-step guide to become a mirror
 
 ### Request a rsync account
 
-Before starting the setup, [contact Joel Esler](mailto:joel@sourcefire.com) to verify that there is a need for another mirror in your country.
+Before starting the setup, [contact Joel Esler](mailto:jesler@cisco.com) to verify that there is a need for another mirror in your country.
 
 ### Configure your web server
 
